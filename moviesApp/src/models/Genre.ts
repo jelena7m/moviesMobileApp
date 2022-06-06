@@ -4,5 +4,4 @@ export interface GenreData {
   genre: [];
   releaseDate?: string;
   overview?: string;
-  genres: [];
 }

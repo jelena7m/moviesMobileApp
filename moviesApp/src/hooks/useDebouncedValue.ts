@@ -1,7 +1,7 @@
 import {useRef, useState} from 'react';
 
-export const useDebouncedValue = () => {
-  const [value, setValue] = useState<string>();
+export const useDebouncedValue = (defaultValue?: string) => {
+  const [value, setValue] = useState(defaultValue);
   const timeout = useRef<any>();
 
   const setDebouncedValue = (newValue: string) => {
@@ -9,7 +9,7 @@ export const useDebouncedValue = () => {
 
     timeout.current = setTimeout(() => {
       setValue(newValue);
-    }, 500);
+    }, 250);
   };
   return {value, setValue: setDebouncedValue};
 };

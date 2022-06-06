@@ -6,7 +6,7 @@ import {GenreData} from '../../models/Genre';
 import {CustomButton} from '../CustomButton/CustomButton';
 import styles from './style';
 
-export const MovieCard: React.FC<GenreData> = ({
+export const MovieCard: React.FC<GenreData & {genres: GenreData[]}> = ({
   backdrop,
   title,
   genre,

@@ -1,7 +1,6 @@
 import Config from 'react-native-config';
 
 export const api_key = Config.API_KEY;
-
 export const baseUrl = 'https://api.themoviedb.org/3/';
 
 export const urlMovies =
